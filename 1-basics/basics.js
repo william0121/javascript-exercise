@@ -12,7 +12,8 @@ describe("basics", function() {
         it("should run without errors", function() {
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-
+            let someVariable = true ;
+            expect(someVariable).to.equal(true);
             ////////////////////////////////////////////////////////////////////
 
             expect(someVariable).to.equal(true);
@@ -26,7 +27,7 @@ describe("basics", function() {
             ////////////////////////////////////////////////////////////////////
             // Declare "someVariable" in way so that the declaration is hoisted.
             // ✏️ ADD CODE HERE ✏️
-
+            var someVariable = undefined;
             ////////////////////////////////////////////////////////////////////
         });
     });
@@ -40,7 +41,7 @@ describe("basics", function() {
             ////////////////////////////////////////////////////////////////////
             // Declare "someVariable" in way so that the declaration is NOT hoisted.
             // ✏️ ADD CODE HERE ✏️
-
+            let someVariable;
             ////////////////////////////////////////////////////////////////////
 
             expect(someVariable).to.equal(undefined);
@@ -51,7 +52,7 @@ describe("basics", function() {
         it("should run without errors", function() {
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-
+            var someVariable = undefined;
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof someVariable).to.equal("undefined");
@@ -70,7 +71,7 @@ describe("basics", function() {
             // new Number() creates a "primitive wrapper". It's not an actual number, it's an object.
             // In 99.999% of all cases, this is a bug and not actually intended. Fix it! :)
             // ✏️ FIX THAT BUG ✏️
-            const someNumber = new Number(3);
+            const someNumber = 3;
             ////////////////////////////////////////////////////////////////////
 
             // The primitive wrapper passes the loose quality check because it will be casted to a number.
@@ -88,7 +89,7 @@ describe("basics", function() {
             // write all the zeros.
             // Write it as a string so that the .length property can be checked.
             // ✏️ EDIT NEXT LINE ✏️
-            const bigNumber = "...";
+            const bigNumber = "1e9";
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof bigNumber).to.equal("string");
@@ -105,7 +106,7 @@ describe("basics", function() {
             // written in way that we don't have to write all the zeros AFTER the point.
             // Write it as a string so that the .length property can be checked.
             // ✏️ EDIT NEXT LINE ✏️
-            const someNumber = "...";
+            const someNumber = "10.";
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof someNumber).to.equal("string");
@@ -122,9 +123,9 @@ describe("basics", function() {
             // written in way that we don't have to write all the zeros BEFORE the point.
             // Write it as a string so that the .length property can be checked.
             // ✏️ EDIT NEXT LINE ✏️
-            const someNumber = "...";
+            const someNumber = ".2";
             ////////////////////////////////////////////////////////////////////
-
+            
             expect(typeof someNumber).to.equal("string");
             expect(someNumber.length).to.equal(2);
             expect(parseFloat(someNumber)).to.equal(0.2);
@@ -135,6 +136,9 @@ describe("basics", function() {
         it("should run without errors", function() {
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
+            const object = {
+                someProperty: 1
+            };
 
             ////////////////////////////////////////////////////////////////////
 
@@ -151,7 +155,7 @@ describe("basics", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-
+            object.someProperty = undefined;
             ////////////////////////////////////////////////////////////////////
 
             // object.someProperty is undefined...
@@ -170,7 +174,7 @@ describe("basics", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-
+            delete object.someProperty;
             ////////////////////////////////////////////////////////////////////
 
             // object.someProperty is undefined...
@@ -187,7 +191,7 @@ describe("basics", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-
+            const secondArray = firstArray
             ////////////////////////////////////////////////////////////////////
 
             expect(secondArray).to.eql([1, 2, 3]);
@@ -209,7 +213,7 @@ describe("basics", function() {
             ////////////////////////////////////////////////////////////////////
             // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
             // ✏️ ADD CODE HERE ✏️
-
+            const secondArray = firstArray.slice()
             ////////////////////////////////////////////////////////////////////
 
             expect(firstArray).to.eql([1, 2, 3]);
@@ -230,7 +234,7 @@ describe("basics", function() {
             ////////////////////////////////////////////////////////////////////
             // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
             // ✏️ ADD CODE HERE ✏️
-
+            const longArray =Array(100)
             ////////////////////////////////////////////////////////////////////
 
             expect(longArray).to.be.instanceOf(Array);
@@ -247,7 +251,8 @@ describe("basics", function() {
             // By observing their casting behavior in the tests below, you can find
             // out the required types.
             // ✏️ ADD CODE HERE ✏️
-
+            const firstVariable = 3;
+            const secondVariable = "1";
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof firstVariable).to.equal("number");
@@ -264,7 +269,7 @@ describe("basics", function() {
             ////////////////////////////////////////////////////////////////////
             // Can you find a string that casts to `false` in an if() statement?
             // ✏️ ADD CODE HERE ✏️
-
+            const falsyString = "";
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof falsyString).to.equal("string");
@@ -281,7 +286,8 @@ describe("basics", function() {
             ////////////////////////////////////////////////////////////////////
             // Can you find two different numbers that each cast to `false` in an if() statement?
             // ✏️ ADD CODE HERE ✏️
-
+            const falsyNumber1 = 0;
+            const falsyNumber2 = NaN;
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof falsyNumber1).to.equal("number");
@@ -305,7 +311,7 @@ describe("basics", function() {
             ////////////////////////////////////////////////////////////////////
             // Can you find a value that is typeof "object" but also casts to `false`?
             // ✏️ ADD CODE HERE ✏️
-
+            const falsyThing = null;
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof falsyThing).to.equal("object");
@@ -335,7 +341,7 @@ describe("basics", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-
+            propertyName = "secondProperty"
             ////////////////////////////////////////////////////////////////////
 
             // That's the same property access as above, but now we get back
@@ -350,7 +356,8 @@ describe("basics", function() {
             // You can create objects that reference themselves.
             // But you need two steps to do it.
             // ✏️ ADD CODE HERE ✏️
-
+            const object = {};
+            object.object = object;  
             ////////////////////////////////////////////////////////////////////
 
             expect(object.object).to.equal(object);
