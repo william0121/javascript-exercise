@@ -14,7 +14,9 @@ describe("functions", function () {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
+                function myFunction() {
 
+                }
             ////////////////////////////////////////////////////////////////////
         });
     });
@@ -27,7 +29,9 @@ describe("functions", function () {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
+                const myFunction = function() {
 
+                }
             ////////////////////////////////////////////////////////////////////
 
             myFunction(); // myFunction should be callable now
@@ -40,7 +44,13 @@ describe("functions", function () {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-
+            const otherFunction = () => {}
+            myFunction = otherFunction
+            if (myFunction !== otherFunction) {
+                throw new Error(
+                    "myFunction and otherFunction should be the same function"
+                );
+            }
             ////////////////////////////////////////////////////////////////////
 
             if (myFunction !== otherFunction) {
