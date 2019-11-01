@@ -67,7 +67,7 @@ describe("functions", function () {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ EDIT LINE BELOW ✏️
-            myFunction(); // why is myFunction not callable?
+           const  myFunction = function() {}; // why is myFunction not callable?
             ////////////////////////////////////////////////////////////////////
         });
     });
