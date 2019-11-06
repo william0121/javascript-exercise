@@ -2,7 +2,7 @@
 
 Implement a drum kit that plays the given sounds when the corresponding key is pressed following these steps:
 
-* Listen for the [`keydown`](https://developer.mozilla.org/en-US/docs/Web/Events/keydown) event on the [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window) object
+* Listen for the [`keydown`](://developer.mozilla.org/en-US/docs/Web/Events/keydown) event on the [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window) object
 * Play the corresponding audio file when the pressed key matches a DOM [`<audio>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement) element. The [`<audio>`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement) element has a `play()` method. Read also about [`data-`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) attributes.
 * You need to rewind the audio file before playing it
 * Apply the `playing` CSS class to the DOM element that represents the instrument when the key has been pressed
