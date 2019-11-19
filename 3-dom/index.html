@@ -70,6 +70,18 @@
       audio.currentTime = 0;
       audio.play()
       console.log(key);
+  
+      function removeTransition(event) {
+        if (event.propertyName === "transform")
+        console.log(event);
+      }
+
+
+      const keys = Array.from(document.querySelector(".key"));
+
+    keys.forEach(key => key.addEventListener("transitioned", removeTransition));
+
+    window.addEventListener("keydown", playSound);
     }
   window.addEventListener("keydown", playSound)
   </script>
